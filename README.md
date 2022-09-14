@@ -1,1 +1,40 @@
-# lapwing-os
+# lapwing_os
+## simple operating system
+### to build os:
+```sh
+make all
+```
+### to run os using bochs:
+```sh
+# if you have rebuild os:
+ gnome-disk-image-mounter --writable os.img # to mount os fat16 img
+ cp bin/* $(findmnt -ro TARGET | grep OS)   # to copy all binaries to os.img
+ umount $(findmnt -ro TARGET | grep OS)     # to unmount os fat16 img
+#
+bochs                                       # to run os using bochs
+```
+### features:
+- [x] long mode
+- [x] time handler
+- [x] memory menager (paging mechanism)
+- [x] process menager
+- [x] multi-tasking and task switching
+- [x] keyboard driver (PS/2)
+- [x] simple fat16 module
+- [x] printf, scanf functions
+- [x] handling interrupts and exceptions
+- [x] simple cli
+
+### user commands:
+```sh
+LS       # list all files, use to check filesystem support
+TOTALMEM # return all available memory (MB)
+PINGPONG # use to check process calls like sleep, wait, switching between processes.
+```
+### lapwing_os in action:
+[lapwing_os_in_action.webm](https://user-images.githubusercontent.com/78093105/190253704-32918f3f-4f27-4fb7-a64a-04a3ff6fefac.webm)
+
+### requirements (my setup):
+* Bochs x86 Emulator 2.6.11
+* gcc 9.4.0
+* nasm version 2.14.02
