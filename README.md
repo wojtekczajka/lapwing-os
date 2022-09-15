@@ -32,7 +32,7 @@ TOTALMEM # return all available memory (MB)
 PINGPONG # use to check process calls like sleep, wait, switching between processes.
 ```
 ### lapwing_os in action:
-[lapwing_os_in_action.webm](https://user-images.githubusercontent.com/78093105/190253704-32918f3f-4f27-4fb7-a64a-04a3ff6fefac.webm)
+https://user-images.githubusercontent.com/78093105/190382584-5fdbd028-177a-4216-9b27-3c9b6317327c.mp4
 
 ### requirements (my setup):
 * Bochs x86 Emulator 2.6.11
